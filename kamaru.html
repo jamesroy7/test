@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="recipe.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+</head>
+
+<body>
+
+   
+    <section class="container text-center my-5">
+        <h1 class="recipe-title" style="border-bottom:1px solid red;">Delicious Kapampangan Adobong Kamaru</h1>
+    </section>
+
+    
+    <section class="container text-center">
+        <button class="btn btn-primary m-2" onclick="toggleSection('background')">Recipe Background</button>
+        <button class="btn btn-primary m-2" onclick="toggleSection('ingredients')">Ingredients</button>
+        <button class="btn btn-primary m-2" onclick="toggleSection('instructions')">Instructions</button>
+        <button class="btn btn-primary m-2" onclick="toggleSection('video')">Recipe Video</button>
+    </section>
+
+   
+    <section id="background" class="container recipe-section">
+        <div class="recipe-background">
+            <h3 class="text-center">Background of the Recipe</h3>
+            <p class="text-center">Adobong Kamaru is a unique and exotic Kapampangan delicacy made from mole crickets (kamaru) cooked in the classic adobo style. It offers a savory, tangy, and slightly nutty flavor, showcasing Pampanga’s adventurous culinary traditions. <br> Adobong Kamaru is a testament to the resourcefulness and boldness of Kapampangan cuisine. Crickets, which thrive in rice fields, have been a sustainable food source in Pampanga for generations. Their inclusion in local dishes highlights the Kapampangans' willingness to explore nontraditional ingredients.</p>
+        </div>
+    </section>
+
+   
+    <section id="ingredients" class="container recipe-section hidden">
+        <div class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>2 cups kamaru (mole crickets), cleaned and washed</li>
+                <li>2 tablespoons cooking oil</li>
+                <li>4 cloves garlic, minced</li>
+                <li>1 medium onion, chopped</li>
+                <li>2 tablespoons vinegar</li>
+                <li>2 tablespoons soy sauce</li>
+                <li>1 cup water</li>
+                <li>1 teaspoon ground black pepper</li>
+                <li>1 piece bay leaf</li>
+                <li>Optional: chili peppers for a spicy kick</li>
+            </ul>
+        </div>
+    </section>
+
+  
+    <section id="instructions" class="container recipe-section hidden">
+        <div class="instructions">
+            <h3>Instructions</h3>
+            <ol>
+                <li>Wash the kamaru thoroughly in water to remove dirt and debris. Drain and pat dry.</li>
+                <li>Optional: Blanch the crickets in boiling water for 2 minutes to reduce any earthy taste, then drain.</li>
+                <li>Heat oil in a pan over medium heat. Sauté garlic and onion until fragrant and lightly golden.</li>
+                <li>Add the cleaned kamaru to the pan and stir-fry for 3-5 minutes until they begin to crisp up.</li>
+                <li>Pour in vinegar and soy sauce, and let it simmer without stirring for 1-2 minutes to cook off the acidity.</li>
+                <li>Add water, bay leaf, and ground black pepper. Mix well.</li>
+                <li>Lower the heat and let the mixture simmer until the sauce thickens and coats the crickets, about 10-15 minutes.</li>
+                <li>For a spicier version, add chili peppers during the simmering process.</li>
+                <li>Transfer to a serving dish and enjoy as a unique appetizer or side dish with steamed rice.</li>
+            </ol>
+        </div>
+    </section>
+
+   
+    <section id="video" class="container video-container hidden">
+        <h3>Watch How to Make Adobong Kamaru</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nIRfDjWDpDo?si=F2o2UA2OH9fhtED7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section class="container text-center my-5">
+        <h2 class="section-title">What Our Customers Are Saying</h2>
+    
+        <div class="review-container row">
+            <div class="col-md-4">
+                <div class="review-box">
+                    <img src="/images/rr.jpg" alt="Client 1" class="review-img">
+                    <h3>Romeo Catacutan</h3>
+                    <p class="review-text">"ANG SARAP NIYAAAAAA!!!! IDOL!!!"</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="review-box">
+                    <img src="/images/baron.jpg" alt="Client 1" class="review-img">
+                    <h3>Baron Geisler</h3>
+                    <p class="review-text">"ASAN ANG SABAAAAAAAW!!!!!!!????"</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="review-box">
+                    <img src="/images/mic.jpg" alt="Client 1" class="review-img">
+                    <h3>Mic Enriquez</h3>
+                    <p class="review-text">"ANG SARAP MO PIAAAAA!!! SARAP "</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="review-box">
+                    <img src="/images/un.jpg" alt="Client 1" class="review-img">
+                    <h3>UNANIMOUS</h3>
+                    <p class="review-text">"TAMANG TAMA ANG PAGKA  TABANG NIYA"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="text-align: center;">
+        <h1 class="ab">ABOUT US</h1>
+      </div>
+    <div class="about-us-carousel" id="aboutus">
+        <div class="about-us-slides">
+          <div class="about-us-slide active">
+            <img src="images/team.jpg" alt="Person 1">
+            <div class="about-us-description">
+                <h2>THE TEAM</h2>
+                <p>BSIT-NA3A</p>
+            </div>
+        </div>
+            <div class="about-us-slide active">
+                <img src="images/james.jpeg" alt="Person 1">
+                <div class="about-us-description">
+                    <h2>JAMES ROY</h2>
+                    <p>DEVELOPER</p>
+                </div>
+            </div>
+            <div class="about-us-slide">
+                <img src="images/allen.jpeg" alt="Person 2">
+                <div class="about-us-description">
+                    <h2>MARC ALLEN GULLIERMO</h2>
+                    <p>DESIGNER</p>
+                </div>
+            </div>
+            <div class="about-us-slide">
+                <img src="images/juju.png" alt="Person 3">
+                <div class="about-us-description">
+                    <h2>JOHN LUIS JUICO</h2>
+                    <p>FINANCE</p>
+                </div>
+            </div>
+            <div class="about-us-slide">
+                <img src="images/jj.png" alt="Person 4">
+                <div class="about-us-description">
+                    <h2>JAYSON  MANALASTAS</h2>
+                    <p>MANAGER</p>
+                </div>
+            </div>
+            <div class="about-us-slide">
+                <img src="images/sige.jpg" alt="Person 5">
+                <div class="about-us-description">
+                    <h2>AMIEL CASTRO</h2>
+                    <p>MARKETING</p>
+                </div>
+            </div>
+            <div class="about-us-slide">
+                <img src="images/gariles.jpg" alt="Person 6">
+                <div class="about-us-description">
+                    <h2>MITCHELLE GARILES</h2>
+                    <p>SALES</p>
+                </div>
+            </div>
+        </div>
+        <button class="about-us-button about-us-prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="about-us-button about-us-next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    <footer class="footer" id="footer">
+        <div class="container" style="height: auto;">
+            <div class="row">
+               
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Contact Us</h5>
+                    <p><strong>Email:</strong> Kapampangan@gmail.com</p>
+                    <p><strong>Phone:</strong> 09452454732</p>
+                </div>
+      
+                
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li style="background: none;"><a href="#">Privacy Policy</a></li>
+                        <li style="background: none;"><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+      
+              
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="https://facebook.com"><i class="bi bi-facebook"></i> Facebook</a>
+                        <a href="#"><i class="bi bi-twitter"></i> Twitter</a>
+                        <a href="#"><i class="bi bi-instagram"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+      
+            <hr class="border-top border-light">
+      
+            <div class="text-center">
+                <p>&copy; 2024 KAPAMPAMANGAN. All rights reserved.</p>
+            </div>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+    <script>
+        function toggleSection(sectionId) {
+            var sections = ['background', 'ingredients', 'instructions', 'video'];
+            sections.forEach(function (id) {
+                var section = document.getElementById(id);
+                if (id === sectionId) {
+                    section.classList.toggle('hidden'); 
+                } else {
+                    section.classList.add('hidden'); 
+                }
+            });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

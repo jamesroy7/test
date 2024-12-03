@@ -1,0 +1,969 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+  
+body {
+    font-family: "Roboto" , "sans serif";
+    background-color: white;
+    
+   
+}
+.carousel {
+    height: 100vh; /* Set the height to 100% of the viewport */
+  }
+  
+  .carousel-inner {
+    height: 100%; /* Ensure inner content takes full height */
+  }
+  
+  .carousel-item {
+    height: 100%; /* Ensure each slide takes full height */
+   
+  }
+  
+  .carousel-item img {
+    object-fit: cover; /* Ensure the image covers the entire slide without distortion */
+    height: 100%; /* Make the image fill the slide height */
+    width: 100%; /* Ensure the image spans the full width */
+    
+  }
+/* Wrapper for the carousel and navbar */
+.carousel-wrapper {
+    position: relative;
+  }
+  
+  /* Navbar centered at the top */
+  .navbar {
+    position: absolute;
+    top: 20px; /* Adjust as needed to position from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Ensures navbar is above carousel */
+    width: 100%; /* Full width of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  /* Navbar links and styling */
+ 
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    gap: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(237, 237, 237,.1);
+    backdrop-filter: blur(3px);
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    border-radius: 20px;
+  }
+  .navbar-brand{
+    font-family: "Dancing Script";
+    font-weight: 900;
+    color: red;
+    font-size: 2rem;
+    text-shadow: 
+    0 1px 3px rgba(255, 255, 255, 0.8), /* Soft glow */
+    0 0 5px rgba(255, 255, 255, 0.5);   /* Subtle diffusion effect */
+  }
+  .navbar-brand:hover{
+   color: red !important;
+  }
+    
+  
+  .nav-item a {
+    
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    align-items: center;
+    width: max-content;
+    position: relative;
+    font-weight: 300;
+    margin-right: 0px;
+    
+    
+  }
+ 
+
+  .nav-item  a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: red;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scale(0);
+}
+.nav-item a:hover::after{
+    transform: scale(1);
+   
+   
+}
+.nav-item a:hover{
+    color: white !important;
+}
+
+
+
+  
+  .navbar-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Carousel Styling */
+  #carouselExampleCaptions {
+    height: 100vh; /* Ensure carousel takes up the full screen height */
+  }
+  
+  .carousel-inner {
+    height: 100%; /* Ensure inner content takes up full height */
+  }
+  
+  .carousel-item img {
+    object-fit: cover; /* Makes images cover the full height */
+    height: 100%; /* Ensure images fill the height */
+    opacity: 0.9;
+  }
+  .carousel {
+    position: relative; /* Make sure text appears above carousel */
+    height: 100vh; /* Full screen height */
+    overflow: hidden; /* Prevent overflow */
+}
+/* Default styles for large screens */
+.carousel h1 {
+    font-size: 5rem;
+    letter-spacing:-10px;
+    color: red;
+    font-family:"Archivo Black";
+    z-index: 2; /* Ensure it's above the carousel images */
+    position: relative; /* Set position to ensure it stays above */
+    text-shadow: 
+    0 1px 3px rgba(255, 255, 255, 0.8), /* Soft glow */
+    0 0 5px rgba(255, 255, 255, 0.5);   /* Subtle diffusion effect */
+}
+
+.carousel p {
+    font-size: 2rem;
+    color: black;
+    font-family: "Dancing Script";
+    font-weight: 900;
+    z-index: 2; /* Ensure it's above the carousel images */
+    position: relative; /* Set position to ensure it stays above */
+    text-shadow: 
+    0 1px 3px rgba(255, 255, 255, 0.8), /* Soft glow */
+    0 0 5px rgba(255, 255, 255, 0.5);   /* Subtle diffusion effect */
+}
+
+
+@media (max-width:575px) {
+  .navbar-brand{
+    font-size: 1em;
+
+  }
+  .navbar{
+    width: 100%;
+  }
+  
+}
+@media (max-width:400px) {
+  .navbar-brand{
+    font-size: 0.8em;
+  }
+  .navbar{
+    width: 100%;
+  }
+}
+@media (max-width:1300px) {
+ 
+  .navbar{
+    width: 70%;
+  }
+}
+
+
+
+
+.display-4 {
+    font-family: "Archivo Black";
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: -5px;
+   color: red;
+    animation: slideLeft linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    
+    
+}
+.text-container{
+    flex-direction: column;
+    gap: 100px;
+    display: flex;
+    
+}
+.header-section{
+    
+    height: 100vh;
+}
+.img-fluid{
+    animation: float 4s infinite linear ;
+    
+}
+.fs-2{
+    animation: slideRight linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.fs-1hp{
+  animation: slideRight linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.fs-2 span{
+  font-size: 3rem;
+}
+.logo-container{
+  animation: slideRight linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px); /* Move up */
+    }
+}
+@keyframes slideLeft {
+    0%{
+      scale: 0.5;
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    100% {scale1: 1;opacity: 1;transform: translateX(0px);}
+  }
+
+  @keyframes slideRight {
+    0%{
+      scale: 0.5;
+        opacity: 0;
+        transform: translateX(400px);
+    }
+    100% {scale1: 1;opacity: 1;transform: translateX(0px);}
+  }
+
+  @keyframes slideTop {
+    0%{
+      scale: 0.5;
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    100% {scale1: 1;opacity: 1;transform: translateY(0px);}
+  }
+  .logo-container{
+    width: 50%;
+    background-color: red;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  /*   animation: float 4s infinite linear ; */
+
+  }
+ 
+  
+@media (max-width:575px) {
+  .display-4{
+    font-size: 3rem;
+  }
+  .fs-2{
+    font-size: 0.5rem;
+  }
+  .text-container{
+   gap: 50px;
+  }
+  .logo-container{
+    height: 200px;
+    margin-top: -100px;
+  }
+  
+}
+@media (max-width:400px) {
+  .display-4{
+    font-size: 2rem;
+  }
+  .fs-2{
+    font-size: 0.3rem;
+  }
+  .text-container{
+   gap: 20px;
+  }
+  
+}
+ 
+ /* History of pampanga  and food*/
+
+ .display-5hp{
+  font-family: "Archivo Black";
+  font-size: 4.3rem;
+  font-weight: 900;
+  letter-spacing: -5px;
+ color: red;
+  animation: slideLeft linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  
+  
+  
+  
+}
+.text-containerhp{
+  flex-direction: column;
+  gap: 80px;
+  display: flex;
+  
+}
+.header-sectionhp{
+  
+  height: 100vh;
+}
+.img-fluid{
+  animation: float 4s infinite linear ;
+  
+}
+/* Flex container responsive adjustments */
+.header-sectionhp {
+  flex-direction: column; /* Default to a column layout */
+  align-items: center; /* Center-align items */
+  padding: 20px;
+}
+
+/* For larger screens */
+@media (min-width: 992px) {
+  .header-sectionhp {
+      flex-direction: row; /* Switch to row layout */
+      align-items: center;
+  }
+}
+
+/* Adjust logo and text containers for smaller screens */
+.logo-containerhp {
+  margin-bottom: 20px; /* Add spacing below the logo */
+  text-align: center;
+}
+
+.text-containerhp {
+  margin-bottom: 20px; /* Add spacing below the text container */
+}
+
+.fs-2hp{
+  animation: slideRight linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  font-size: 20px;
+  font-weight: 400;
+  justify-content: center;
+}
+/* .fs-2hp span{
+font-size: 3rem;
+} */
+
+.logo-containerhp{
+animation: slideRight linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  
+}
+
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-50px); /* Move up */
+  }
+}
+@keyframes slideLeft {
+  0%{
+    scale: 0.5;
+      opacity: 0;
+      transform: translateX(-400px);
+  }
+  100% {scale1: 1;opacity: 1;transform: translateX(0px);}
+}
+
+@keyframes slideRight {
+  0%{
+    scale: 0.5;
+      opacity: 0;
+      transform: translateX(400px);
+  }
+  100% {scale1: 1;opacity: 1;transform: translateX(0px);}
+}
+
+@keyframes slideTop {
+  0%{
+    scale: 0.5;
+      opacity: 0;
+      transform: translateY(300px);
+  }
+  100% {scale1: 1;opacity: 1;transform: translateY(0px);}
+}
+.logo-containerhp{
+  width: 50%;
+  background-color: red;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; 
+  animation: float 4s infinite linear ;
+
+}
+
+
+@media (max-width:575px) {
+.display-5hp{
+  font-size: 3rem;
+}
+.fs-2hp{
+  font-size: 0.5rem;
+}
+
+.text-containerhp{
+ gap: 50px;
+}
+.logo-containerhp{
+  height: 200px;
+  margin-top: -100px;
+}
+
+}
+@media (max-width:400px) {
+.display-5{
+  font-size: 2rem;
+}
+.fs-2hp{
+  font-size: 1em;
+}
+.text-containerhp{
+ gap: 20px;
+}
+
+}
+
+/* End of hisstory of pampanga and food*/
+  
+
+.row {
+  
+    margin-top: 50px;
+    display: flex;
+    
+    
+}
+
+.container{
+  height: 140vh;
+  width: 100%;
+  
+ 
+}
+.box {
+height: 320px;
+width: 210px;
+transition: all 0.3s ease;
+animation: scale linear;
+animation-timeline: view();
+animation-range: entry 0% cover 30%;
+ box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1), /* Subtle outer shadow */
+    0 1px 3px rgba(0, 0, 0, 0.08); /* Inner, delicate shadow */
+    border-top: 3px solid red;
+    border-bottom: 3px solid red;
+  
+
+}
+#recipes, #trends {
+  margin-bottom: 30px; 
+  padding-bottom: 30px;
+ 
+}
+
+.box img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+.mb-4{
+  border: 5px solid red;
+  background-color: red;
+  border-right: 5px solid red;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 3rem;
+  font-weight: 200;
+  color: white;
+  animation: slideTop linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+.box:not(:first-child){
+  margin-left: -10px;
+}
+.box:hover{
+  transform: translateY(-20px);
+  opacity: 0.5;
+
+}
+.box:hover～.box{
+  left: 50px;
+}
+
+@keyframes scale {
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+.box img{
+  width: 230px;
+  height: 200px;
+  animation: none;
+  object-fit: cover;
+
+  
+
+}
+
+.box h5 {
+  color: white;
+  padding: 5px;
+  font-family: "Dancing Script";
+  font-weight: 900;
+  font-style: bold;
+  background-color: red;
+}
+
+
+/* Container to ensure proper overflow behavior */
+.slider-container {
+  width: 100%; /* Full-width container */
+  overflow: hidden; /* Hide the text outside the container */
+  white-space: nowrap; /* Prevent text wrapping */
+  position: relative;
+}
+
+/* Container to ensure proper overflow behavior */
+.slider-container {
+  width: 100%; /* Full-width container */
+  overflow: hidden; /* Hide the text outside the container */
+  white-space: nowrap; /* Prevent text wrapping */
+  position: relative;
+}
+
+@media (max-width:1027px) {
+ .mb-4{
+  font-size: 2rem;
+  margin-bottom: 0px;
+ }
+ .box{
+  height: 250px;
+ }
+ .box img{
+  height: 100px;
+ }
+  
+}
+@media (max-width:400px) {
+  
+  
+}
+
+/* Ensuring no horizontal overflow */
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Optional: Ensure the slider text container doesn’t overflow */
+.slider-container {
+  width: 100%;
+  overflow: hidden; /* Hide overflow content */
+  position: relative;
+  background: radial-gradient(circle, #ff0000, #b30000, #660000); /* Static background */
+  
+  margin-top: 20px;
+}
+
+.sliding-text {
+
+  display: inline-block;
+  animation: slide 15s linear infinite; /* Apply sliding animation */
+  font-size: 2rem;
+  color: white;
+  padding: 0 30px; /* Adjust padding for spacing */
+  white-space: nowrap; /* Prevent text wrapping */
+  text-transform: capitalize;
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End off-screen to the left */
+  }
+}
+
+
+/* Keyframes for sliding animation */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.container1{
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+
+.container-fluid1{
+  height: 100vh;
+}
+.recipe-box{
+  height: 190px;
+  object-fit: cover;
+  display: flex;
+  gap: 30px;
+  border-left: 3px solid red;
+  border-radius: 0px;
+  padding: 0px;
+  
+  align-items: center;
+}
+.recipe-box img{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  margin: 0px;
+  padding: 30px;
+  transition: scale 0.3s linear ;
+ border-radius: 50%;
+  animation: slideTop linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+  
+}
+.recipe-box img:hover{
+ scale: 1.2;
+
+}
+
+.recipe-box h3 {
+  
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  animation: scale linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 10%;
+}
+.recipe-box:hover{
+  background-color: red;
+}
+.text-dark{
+  font: 1rem;
+}
+
+
+
+
+/* about us */
+
+.about-us-carousel {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  
+}
+
+.about-us-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.about-us-slide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  padding: 20px; 
+  box-sizing: border-box; 
+  justify-content: space-around;
+}
+
+.about-us-slide img {
+  width: 100%; 
+  height: 300px; 
+  object-fit: cover; 
+  margin-bottom: 15px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.about-us-slide p {
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+
+}
+
+.about-us-description {
+  text-align: center; 
+}
+
+.about-us-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.about-us-prev {
+  left: 10px;
+}
+
+.about-us-next {
+  right: 10px;
+}
+
+@media (max-width: 2500px) {
+  .about-us-slide {
+      flex-direction: row; 
+  }
+
+  .about-us-slide img {
+      max-width: 300px; 
+      margin-right: 20px; 
+  }
+
+  .about-us-description {
+      max-width: 400px; 
+  }
+}
+
+@media (max-width: 600px) {
+  .about-us-slide {
+      flex-direction: column; 
+  }
+
+  .about-us-slide img {
+      max-width: 200px; 
+      margin-right: 10px; 
+      max-height: 150px;
+  }
+
+  .about-us-description {
+      max-width: 200px; 
+  }
+  .box{
+    width: 130px;
+    margin-bottom: 0px;
+    height: 150px;
+   
+  }
+  .box h5{
+   font-size: 0.5rem !important;
+  }
+  .box img{
+   height: 50px !important;
+  }
+  .header-section{
+    height: 30vh !important;
+    justify-content: space-around !important;
+  }
+  .sliding-text{
+    font-size: 1rem;
+    padding: 0 0px !important; 
+    margin-top: 0px !important;
+  }
+  .slider-container{
+    height: 30px;
+    margin-top: 0px;
+  }
+  .mb4 h1{
+    font-size: 1rem;
+  }
+  .footer{
+    height: 120vh !important;
+    font-size: 50px !important;
+  }
+  
+  .display-4{
+    letter-spacing: 0.5rem !important;
+  }
+  .header-sectionhp{
+    justify-content: space-around !important;
+  }
+ 
+  
+
+
+  
+}
+
+
+
+
+.footer {
+  margin-top: auto; 
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  position: relative; 
+  background-color: red; 
+  padding: 20px 0; 
+  height: 220px;
+}
+
+footer {
+  padding: 20px;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+}
+.footer h5 {
+  color: #f8f9fa;
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer p, .footer a {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer .social-links i {
+  color: white;
+  margin-right: 8px;
+}
+
+.footer .social-links a:hover i {
+  color: #fff;
+}
+
+.footer .social-links a {
+  margin-right: 10px;
+}
+
+.header-sectionhp{
+  margin-bottom: 100px;
+}
+@media (max-width:575px) {
+  .header-section{
+    height: 50vh;
+  }
+}
+.ab {
+   
+    border: 5px solid red;
+    background-color: red;
+    border-right: 5px solid red;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 3rem;
+    font-weight: 200;
+    color: white;
+    animation: slideTop linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  
+}
+
+@media (max-width: 600px) {
+  .ab {
+    font-size: 1rem;
+  }
+  .fs-2hp, .fs-1hp{
+    font-size: 0.7em !important;
+  }
+  .display-5hp{
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+  .header-sectionhp{
+    height: 50vh ;
+  }
+  .mb-4{
+    font-size: 1rem;
+  }
+  .text-dark{
+    font-size: 10px !important;
+  }
+  .header-section{
+    height: 70vh !important;
+    justify-content: space-around !important;
+  }
+  .container{
+    height: 110vh !important;
+  }
+  
+  
+  }
+
